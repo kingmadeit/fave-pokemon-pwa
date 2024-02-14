@@ -7,7 +7,7 @@ import styles from './pokemonForm.module.css'
 import axios from 'axios';
 import { HOST, POKEMON_LIST_ENDPOINT } from '@/constants';
 
-const PokemonForm = ({ submitHandler}: PokemonFormProps) => {
+const PokemonForm: React.FC<PokemonFormProps> = ({ submitHandler}: PokemonFormProps) => {
   const {control, handleSubmit} = useForm<TFormData>();
   const [pokemonList, setPokemonList] = useState<{name: string; url: string;}[]>([])
   const getPokemonList = useCallback(async () => {

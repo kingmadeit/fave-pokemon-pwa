@@ -13,6 +13,10 @@ export interface PokemonFormProps {
   submitHandler: SubmitHandler<Partial<TFormData>>;
 }
 
+export interface PokemonCardProps {
+  pokemonName: string;
+  userName: string;
+}
 
 export type TFormData = IUser & {selected_pokemon: string;}
 export interface IPokemonResult {name: string; url: string}

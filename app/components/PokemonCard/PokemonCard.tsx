@@ -4,8 +4,9 @@ import React, { useCallback, useEffect, useState } from 'react'
 import styles from './pokemonCard.module.css'
 import { CircularProgress, Typography } from '..';
 import { capitalize } from '@/constants';
+import { PokemonCardProps } from '@/types';
 
-const PokemonCard = ({pokemonName, userName}: {pokemonName: string, userName: string}) => {
+const PokemonCard: React.FC<PokemonCardProps> = ({pokemonName, userName}: PokemonCardProps) => {
   const [isLoading, setIsLoading] = useState(true);
   const [pokemon, setPokemon] = useState<{name: string; image: string;}>({
     name: '', image: ''
@@ -39,10 +40,10 @@ const PokemonCard = ({pokemonName, userName}: {pokemonName: string, userName: st
       {!isLoading && 
         <div className={styles.container}>
             <>
-              <Typography variant='h6' color='gray'>Welcome, {capitalize(userName)}!</Typography>
-              <Typography variant='body2' color='primary'>meet your favorite pokemon</Typography>
+              <Typography variant='h6' color='gray' className={styles.welcome}>Welcome, {capitalize(userName)}!</Typography>
+              <Typography variant='body2' color='primary' className={styles.welcomeSubText}>meet your favorite pokemon</Typography>
               {!!pokemon.image && <Image src={pokemon.image} alt={pokemon.name} width={250} height={250} />}
-              <Typography variant='h2'>{capitalize(pokemonName)}</Typography>
+              <Typography variant='h2' className={styles.pokemonName}>{capitalize(pokemonName)}</Typography>
             </>
         </div>
       }

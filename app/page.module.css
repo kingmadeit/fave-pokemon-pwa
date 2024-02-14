@@ -6,6 +6,7 @@
   align-items: center;
   padding: 2rem;
   min-height: 850px;
+  min-width: 350px;
   height: 100vh;
 }
 
@@ -13,3 +14,8 @@
   fill: #a31242;
 }
 
+@media screen and (max-width: 600px) {
+  .main {
+    padding: 1em .5em;
+  }
+}

@@ -1,14 +1,20 @@
 'use client'
 import styles from "./customStepperForm.module.css";
-import React, { useEffect, useState } from 'react';
-import Container from '@mui/material/Container';
-import Stepper from '@mui/material/Stepper';
-import Step from '@mui/material/Step';
-import StepLabel from '@mui/material/StepLabel';
-import StepContent from '@mui/material/StepContent';
-import { IUser, TFormData } from "@/types";
-import { PokemonCard, UserForm, PokemonForm, EditNoteOutlinedIcon, Fab } from "..";
 import useStoredData from "@/app/hooks/useStoreData";
+import React, { useEffect, useState } from 'react';
+import { IUser, TFormData } from "@/types";
+import { 
+  PokemonCard, 
+  UserForm, 
+  PokemonForm, 
+  EditNoteOutlinedIcon, 
+  Fab, 
+  Container, 
+  Stepper,
+  Step,
+  StepLabel,
+  StepContent,
+} from "..";
 
 const steps = [
   'Profile',
