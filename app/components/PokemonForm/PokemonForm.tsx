@@ -1,6 +1,6 @@
-import { IPokemon, PokemonFormProps, TFormData } from '@/types'
+import { PokemonFormProps, TFormData } from '@/types'
 import React, { useCallback, useEffect, useState } from 'react'
-import { useForm, Controller, SubmitHandler, SubmitErrorHandler } from 'react-hook-form'
+import { useForm, Controller } from 'react-hook-form'
 import { TextField, Button } from '..';
 import MenuItem from '@mui/material/MenuItem';
 import styles from './pokemonForm.module.css'
