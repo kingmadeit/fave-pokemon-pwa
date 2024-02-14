@@ -11,9 +11,9 @@ import { PokemonCard, UserForm, PokemonForm, EditNoteOutlinedIcon, Fab } from ".
 import useStoredData from "@/app/hooks/useStoreData";
 
 const steps = [
-  'profile',
-  'select your favorite pokemon',
-  'done'
+  'Profile',
+  'Select your favorite pokemon',
+  'Done'
 ];
 
 const CustomStepperForm = () => {
