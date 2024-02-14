@@ -11,10 +11,16 @@ const UserForm: React.FC<UserFormProps> = ({submitHandler}: UserFormProps) => {
   const {control, setError, reset, formState: {errors}, handleSubmit} = useForm<IUser>();
   const [storedData] = useStoredData();
   
+  /***
+   * onload, reset form with stored data if any
+   */
   useEffect(() => {
     if (storedData) reset(storedData);
   }, [reset, storedData])
 
+  /***
+   * validate the email to see if is it valid before submission
+   */
   const validateEmail = (data: IUser) => {
     if (!isValidEmail(data.email)) {
       return setError('email', { 

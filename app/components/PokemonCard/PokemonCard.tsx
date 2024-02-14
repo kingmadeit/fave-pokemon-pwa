@@ -11,6 +11,10 @@ const PokemonCard = ({pokemonName, userName}: {pokemonName: string, userName: st
     name: '', image: ''
   })
   const endpoint = `${process.env.API_HOST}${process.env.INTERNAL_POKEMON_DETAIL_ENDPOINT}?pokemon_name=${pokemonName}`
+
+  /***
+   * cache selected pokemon results between renders unless pokemonName changes
+   */
   const getSelectedPokemon = useCallback(async () => {
     try {
       const res = await axios.get(endpoint);
@@ -20,6 +24,9 @@ const PokemonCard = ({pokemonName, userName}: {pokemonName: string, userName: st
     }
   },[endpoint]);
 
+  /***
+   * fetch selected pokemon detail onload
+   */
   useEffect(() => {
     if (!!pokemonName) getSelectedPokemon()
     setTimeout(() => setIsLoading(false), 500);

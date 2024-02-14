@@ -19,6 +19,9 @@ const PokemonForm = ({ submitHandler}: PokemonFormProps) => {
     }
   },[]);
 
+  /***
+   * fetch pokemon list onload
+   */
   useEffect(() => {
     getPokemonList()
   }, [getPokemonList]);
