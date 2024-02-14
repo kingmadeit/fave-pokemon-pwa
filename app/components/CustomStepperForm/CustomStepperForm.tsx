@@ -30,7 +30,7 @@ const CustomStepperForm = () => {
    * check for stored data and move to display page if (user) data found
    */
   useEffect(() => {
-    if (storedData) { 
+    if (!!storedData && storedData.selected_pokemon) { 
       setFormData(storedData as TFormData);
       setActiveStep(2);
     }
