@@ -1,5 +1,13 @@
 - This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`]
   (https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
+## About
+This app has a submittable stepper form for displaying user's favorite pokemon
+
+User enters their name and email, followed selecting their favorite pokemon's name
+
+App display the picture of the selected pokemon after the second form is submitted.
+
+On page reload, the page remembers which pokemon you selected.
 
 ## Getting Started
 
