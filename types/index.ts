@@ -5,12 +5,6 @@ export interface IUser {
   email: string;
 }
 
-export interface IPokemon {
-  id: string;
-  name: string;
-  img?: string;
-}
-
 export interface UserFormProps {
   submitHandler: SubmitHandler<IUser>;
 }
