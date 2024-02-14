@@ -1,0 +1,12 @@
+.container {
+  padding: 4em 2em;
+
+  width: 100%;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}

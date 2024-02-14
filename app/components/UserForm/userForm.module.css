@@ -1,0 +1,20 @@
+.container {
+  padding: 4em 2em;
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 100%;
+  align-items: center;
+}
+
+.form > *:not(span) {
+  width: 100%;
+}
+
+.form > span { 
+  color: red;
+}

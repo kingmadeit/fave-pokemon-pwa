@@ -1,0 +1,20 @@
+.container {
+  background-color: var(--secondary);
+  min-height: 500px;
+  max-width: 500px;
+  border-radius: 2em;
+  padding: 2em;
+  color: #fff;
+  justify-content: 'center';
+  align-content: 'center';
+  align-items: 'center';
+  width: 100%;
+}
+
+
+.edit {
+  display: flex;
+  margin-top: 1em;
+  align-items: center;
+  gap: 0.5em;
+}

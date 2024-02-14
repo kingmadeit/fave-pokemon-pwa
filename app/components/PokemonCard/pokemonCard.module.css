@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  padding: 1em;
+  border-radius: 0 30px 30px 0;
+  background-color: var(--tertiary);
+}
+
+.container > :first-child {
+  color: lightslategray;
+}
+
+.container > :nth-child(2) {
+  color: gray;
+}
